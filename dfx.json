@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "sohial_backend": {
+      "main": "src/sohial_backend/main.mo",
+      "type": "motoko"
+    },
+    "sohial_frontend": {
+      "dependencies": [
+        "sohial_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/sohial_frontend/src/index.html"
+      },
+      "source": [
+        "src/sohial_frontend/assets",
+        "dist/sohial_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
