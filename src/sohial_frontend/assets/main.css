@@ -1,37 +1,112 @@
-body {
-    font-family: sans-serif;
-    font-size: 1.5rem;
-}
-
-img {
-    max-width: 50vw;
-    max-height: 25vw;
-    display: block;
-    margin: auto;
-}
-
-form {
-    display: flex;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  body {
+    background-image: linear-gradient(to right, #605e7e, #6b73c1, #37b3cc);
+    margin: 50px 2%;
+  }
+  
+  .container-title {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 3px 1px black;
+  }
+  
+  .inputcol {
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: 60% 10%;
     justify-content: center;
-    gap: 0.5em;
-    flex-flow: row wrap;
-    max-width: 40vw;
-    margin: auto;
-    align-items: baseline;
-}
-
-button[type="submit"] {
-    padding: 5px 20px;
-    margin: 10px auto;
-    float: right;
-}
-
-#greeting {
-    margin: 10px auto;
-    padding: 10px 60px;
-    border: 1px solid #222;
-}
-
-#greeting:empty {
-    display: none;
-}
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .textarea {
+    min-height: 50px;
+    max-width: 100%;
+    border-radius: 10px;
+    border-color: #333;
+    font-size: 20px;
+    padding: 10px;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+  
+  .textarea::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #333;
+  }
+  
+  .textarea::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+  }
+  
+  .textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #8f8acc;
+  }
+  
+  .textarea:focus {
+    outline: none;
+  }
+  
+  .buttoninput {
+    border-radius: 10px;
+    border-color: #333;
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttoninput:hover {
+    background-color: #8f8acc;
+    color: white;
+  }
+  
+  #todolist .item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 20px;
+  }
+  
+  .trash-button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .trash-button:hover {
+    background-color: #6b73c1;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  .trash-button:active {
+    transform: scale(0.95);
+  }
+  
+  .fa-check,
+  .fa-trash {
+    pointer-events: none;
+  }
+  

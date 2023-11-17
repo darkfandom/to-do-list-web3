@@ -2,23 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>sohial</title>
-    <base href="/" />
-    <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>ToDo List</title>
   </head>
   <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
+    <div class="container-title">
+      <h1>TO DO LIST</h1>
+    </div>
+    <div class="container">
+      <form class="inputcol">
+        <textarea
+          class="textarea"
+          type="text"
+          name="textarea"
+          placeholder="Add todo"
+          required
+        ></textarea>
+        <button class="buttoninput" type="submit">
+          <i class="fa-solid fa-check"></i>
+        </button>
       </form>
-      <section id="greeting"></section>
-    </main>
+    </div>
+    <ul id="todolist"></ul>
+    <script src="index.js"></script>
   </body>
 </html>
